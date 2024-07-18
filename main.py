@@ -1,12 +1,14 @@
-from flask import Flask
-
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+import http.server
+import socketserver
+from http import HTTPStatus
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+class Handler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(HTTPStatus.OK)
+        self.end_headers()
+        self.wfile.write(b'Hello world')
+
+
+httpd = socketserver.TCPServer(('', 8080), Handler)
+httpd.serve_forever()
