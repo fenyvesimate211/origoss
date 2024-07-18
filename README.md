@@ -3,13 +3,14 @@
 - **username:** thisIsAUsername
 - **token:** thisIsAToken
 
-## Add these Secrets to your Github repository
+## Add these Secrets to your GitHub repository
 github.com/<your_username>/<your_repository>/settings/secrets/actions > Repository secrets
 
 ```bash
 sudo apt-get install docker && sudo apt install -y python3 python3-pip
 sudo apt-get install awscli -y
-sudo apt-get install terraform || sudo snap install terraform --classic
+sudo apt-get install terraform 
+#sudo snap install terraform --classic
 ```
 
 ## Install kubectl
@@ -24,7 +25,7 @@ sudo mv kubectl /usr/local/bin/
 aws configure
 ```
 
-AWS Access Key ID [None]: AWSAcessKey
+AWS Access Key ID [None]: AWSAccessKey
 
 AWS Secret Access Key [None]: AWSSecretAccessKey
 
