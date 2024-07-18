@@ -25,13 +25,17 @@ aws configure
 ```
 
 AWS Access Key ID [None]: AWSAcessKey
+
 AWS Secret Access Key [None]: AWSSecretAccessKey
+
 Default region name [None]: eu-central-1
+
 Default output format [None]: json
 
 ## Set up Kubernetes context
 
-kubectl config set-context <context-name> --cluster=<cluster-name> --user=<user-name> --namespace=default
+kubectl config set-context **context-name** --cluster=**cluster-name** --user=**user-name** --namespace=default
+
 kubectl config use-context arn:aws:eks:eu-central-1:<numbers>:cluster/origoss-cluster
 
 
@@ -47,9 +51,6 @@ sudo docker run -d -p 8080:8080 --name origoss_container origoss
 ```bash
 docker ps
 ```
-
-CONTAINER ID   IMAGE     COMMAND            CREATED              STATUS              PORTS                                       NAMES
-4a623ff524b0   origoss   "python main.py"   About a minute ago   Up About a minute   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   origoss_container
 
 ## Deploy Kubernetes
 ```bash
