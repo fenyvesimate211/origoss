@@ -1,6 +1,6 @@
 provider "kubernetes" {
   config_path    = "~/.kube/config"
-  config_context = "arn:aws:eks:eu-central-1:992382520692:cluster/origoss-cluster"
+  config_context = "docker-desktop"
 }
 
 resource "kubernetes_manifest" "hello-world" {
